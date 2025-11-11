@@ -37,21 +37,58 @@ source venv/bin/activate
 pip install requests requests_toolbelt tqdm python-dotenv watchdog
 deactivate
 ```
-### 3️⃣ Buat Bot Telegram
+## 🔑 Membuat Bot Telegram & Mendapatkan Token
 
-Buka Telegram
-Cari @BotFather
-Kirim perintah: /newbot
-Ikuti instruksi — nanti kamu dapat token 
-seperti:123456789:ABCDEFghijklmnopqrstuvwxyz
+1. **Buka Telegram**, lalu cari akun resmi bernama **[@BotFather](https://t.me/BotFather)**  
+2. Kirim perintah berikut ke BotFather:
+   ```
+   /newbot
+   ```
+3. Ikuti instruksinya — BotFather akan meminta:
+   - Nama bot (misalnya: `Backup Notifier`)
+   - Username bot (harus diakhiri dengan `bot`, contoh: `backup_sirama_bot`)
+4. Setelah selesai, kamu akan menerima pesan seperti ini:
+   ```
+   Done! Congratulations on your new bot.
+   Use this token to access the HTTP API:
+   123456789:ABCDEFghijklmnopqrstuvwxyz
+   ```
+   👉 **Salin token tersebut** — itu akan digunakan sebagai `API_TOKEN` di file `.env`.
 
-Dapatkan CHAT_ID kamu:
-Buka Telegram Web
-Cari https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
-Kirim pesan ke bot kamu dulu
-Lalu buka link itu di browser
-Lihat JSON hasilnya → chat: { "id": 123456789 }
-👉 Itulah CHAT_ID.
+---
+
+## 💬 Mendapatkan CHAT_ID Telegram
+
+1. **Kirim pesan apa saja** ke bot yang baru kamu buat (misalnya “Halo Bot!”).  
+2. Buka link berikut di browser (ganti `<YOUR_TOKEN>` dengan token kamu):
+   ```
+   https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
+   ```
+3. Kamu akan melihat output JSON seperti ini:
+   ```json
+   {
+     "ok": true,
+     "result": [
+       {
+         "message": {
+           "chat": {
+             "id": 123456789,
+             "first_name": "NamaKamu",
+             "type": "private"
+           },
+           "text": "Halo Bot!"
+         }
+       }
+     ]
+   }
+   ```
+4. Nilai pada `chat.id` adalah **CHAT_ID** kamu:
+   ```
+   CHAT_ID=123456789
+   ```
+
+---
+
 
 ### 4️⃣ Konfigurasi `.env`
 Buat file `.env` di root folder:
