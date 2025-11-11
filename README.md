@@ -42,7 +42,8 @@ deactivate
 Buka Telegram
 Cari @BotFather
 Kirim perintah: /newbot
-Ikuti instruksi — nanti kamu dapat token seperti:123456789:ABCDEFghijklmnopqrstuvwxyz
+Ikuti instruksi — nanti kamu dapat token 
+seperti:123456789:ABCDEFghijklmnopqrstuvwxyz
 
 Dapatkan CHAT_ID kamu:
 Buka Telegram Web
