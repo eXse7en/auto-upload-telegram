@@ -26,7 +26,7 @@
 
 ### 1️⃣ Clone & Masuk ke Folder
 ```bash
-git clone https://github.com/your-org/auto-upload-telegram.git
+git clone https://github.com/eXse7en/auto-upload-telegram.git
 cd auto-upload-telegram
 ```
 
