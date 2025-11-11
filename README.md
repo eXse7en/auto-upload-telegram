@@ -37,14 +37,28 @@ source venv/bin/activate
 pip install requests requests_toolbelt tqdm python-dotenv watchdog
 deactivate
 ```
+### 3️⃣ Buat Bot Telegram
 
-### 3️⃣ Konfigurasi `.env`
+Buka Telegram
+Cari @BotFather
+Kirim perintah: /newbot
+Ikuti instruksi — nanti kamu dapat token seperti:123456789:ABCDEFghijklmnopqrstuvwxyz
+
+Dapatkan CHAT_ID kamu:
+Buka Telegram Web
+Cari https://api.telegram.org/bot<YOUR_TOKEN>/getUpdates
+Kirim pesan ke bot kamu dulu
+Lalu buka link itu di browser
+Lihat JSON hasilnya → chat: { "id": 123456789 }
+👉 Itulah CHAT_ID.
+
+### 4️⃣ Konfigurasi `.env`
 Buat file `.env` di root folder:
 
 ```env
 API_TOKEN=123456789:ABCDEFghijklmnopqrstuvwxyz
 CHAT_ID=123456789
-UPLOAD_DIR=/var/www/html/sirama/backup
+UPLOAD_DIR=/var/www/html/sirama/backup (Sesuaikan direktori File kamu)
 ```
 
 ---
@@ -152,7 +166,7 @@ sudo tail -f /var/log/auto_upload_telegram.log
 ## 🪪 Lisensi
 
 MIT License © 2025  
-Dikembangkan oleh Tim DevOps internal.
+Dikembangkan oleh Tim SiRama internal.
 
 ---
 
@@ -166,5 +180,4 @@ Pastikan kode kamu teruji dan mengikuti standar Pythonic (PEP8).
 ## 📬 Kontak
 
 Untuk pertanyaan atau bantuan teknis, hubungi:
-- Telegram: [@your_team_channel](https://t.me/your_team_channel)
-- Email: devops@yourcompany.com
+- Tim SiRama
