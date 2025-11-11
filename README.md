@@ -24,13 +24,13 @@
 
 ## 🧱 Instalasi
 
-### 1️⃣ Clone & Masuk ke Folder
+### 📦 Clone & Masuk ke Folder
 ```bash
 git clone https://github.com/eXse7en/auto-upload-telegram.git
 cd auto-upload-telegram
 ```
 
-### 2️⃣ Buat Virtual Environment
+### 🧰 Buat Virtual Environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -90,7 +90,7 @@ deactivate
 ---
 
 
-### 4️⃣ Konfigurasi `.env`
+### 🧩 Konfigurasi `.env`
 Buat file `.env` di root folder:
 
 ```env
