@@ -92,6 +92,7 @@ deactivate
 
 ### 🧩 Konfigurasi `.env`
 Buat file `.env` di root folder:
+nano .env
 
 ```env
 API_TOKEN=123456789:ABCDEFghijklmnopqrstuvwxyz
